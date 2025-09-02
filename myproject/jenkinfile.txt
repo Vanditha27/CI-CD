@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+               
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo "Building the project..."
+                bat 'echo Build successful!'   // Windows command example
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo "Testing the project..."
+                bat 'echo Test successful!'    // Windows command example
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo "Deploying the project..."
+                bat 'echo Deploy successful!'  // Windows command example
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "CI/CD Pipeline finished successfully!"
+        }
+        failure {
+            echo "Pipeline failed!"
+        }
+    }
+}
