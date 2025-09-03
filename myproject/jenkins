@@ -1,0 +1,32 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Run') {
+      steps {
+        echo 'Running...'
+        // pause a little so you can watch the bar change
+        sleep time: 2, unit: 'SECONDS'
+      }
+    }
+
+    stage('Compile') {
+      steps {
+        echo 'Compiling...'
+        sleep time: 2, unit: 'SECONDS'
+      }
+    }
+
+    stage('Test') {
+      steps {
+        echo 'Testing...'
+        sleep time: 2, unit: 'SECONDS'
+      }
+    }
+  }
+
+  post {
+    success { echo 'Pipeline finished ✅' }
+    failure { echo 'Pipeline failed ❌' }
+  }
+}
