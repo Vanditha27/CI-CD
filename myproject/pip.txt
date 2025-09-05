@@ -24,6 +24,7 @@ pipeline {
 
         stage('Test') {
             steps {
+                echo "hi"
                 echo "Testing existing code..."
                 // Example: run your test commands if any
                 sh 'echo "Replace this with your test commands"'
