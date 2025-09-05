@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Pull Code') {
+            steps {
+                // Pull your existing repo code
+                git url: 'https://github.com/Vanditha27/CI-CD.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo "Building existing code..."
+                // Example: run any build commands you already have
+                sh 'echo "Replace this with your build commands"'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo "Testing existing code..."
+                // Example: run your test commands if any
+                sh 'echo "Replace this with your test commands"'
+            }
+        }
+    }
+}
