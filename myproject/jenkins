@@ -12,7 +12,7 @@ pipeline {
 
     stage('Compile') {
       steps {
-        echo 'Compiling...'
+        echo 'Compiling..........'
         sleep time: 2, unit: 'SECONDS'
       }
     }
