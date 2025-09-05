@@ -29,10 +29,6 @@ pipeline {
                 sh 'echo "Replace this with your test commands"'
             }
         }
-       stage('run'){
-           steps{
-               sh 'echo "running"'
-           }
-       }
+       
     }
 }
