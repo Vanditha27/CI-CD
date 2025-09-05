@@ -5,7 +5,7 @@ pipeline {
         stage('Pull Code') {
             steps {
                git (
-                git branch:'main',
+                branch:'main',
                 
                 url: 'https://github.com/Vanditha27/CI-CD.git',
                 credentialsId:'github-credentials'
