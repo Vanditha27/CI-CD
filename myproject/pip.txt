@@ -18,6 +18,7 @@ pipeline {
                 echo "Building existing code..."
                 // Example: run any build commands you already have
                 sh 'echo "Replace this with your build commands"'
+
             }
         }
 
@@ -28,5 +29,10 @@ pipeline {
                 sh 'echo "Replace this with your test commands"'
             }
         }
+       stage('run'){
+           steps{
+               sh 'echo "running"'
+           }
+       }
     }
 }
