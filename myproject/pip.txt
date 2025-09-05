@@ -4,8 +4,10 @@ pipeline {
     stages {
         stage('Pull Code') {
             steps {
+                git branch:'main'
                 // Pull your existing repo code
-                git url: 'https://github.com/Vanditha27/CI-CD.git'
+                url: 'https://github.com/Vanditha27/CI-CD.git'
+                credentialsId:'github-credentials'
             }
         }
 
